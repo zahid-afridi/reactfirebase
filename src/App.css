@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+.login_btn {
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  background-color: red;
+  color: white;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.btn_container {
+   display: flex;
+position: absolute;
+gap: 10px;
+margin-top: 20px;
+flex-direction: column;
+
+
+}
+.btn_container h5 {
+  font-size: 20px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+ 
+ 
+}
+.login_form{
+  width: 300px;
+  background-color: rgb(222, 137, 185);
+  padding: 20px;
+   margin-bottom: 60px;
+   border-radius: 10px;
+  height: 420px;
+  margin-top: 90px;
+   color: white !important;
+   color: rgb(33, 33, 164);
+
+}
+.login_form form input{
+  border: none;
+  outline: none;
+  border-radius: 10px !important;
+}
+.register_form{
+    width: 400px;
+  background-color: rgb(138, 82, 114);
+  padding: 20px;
+   margin-bottom: 60px;
+   border-radius: 10px;
+   color: white;
+   margin-top: 50px;
+}
+.register_form form input{
+  border: none;
+  outline: none;
+  border-radius: 10px !important;
+  height: 40px !important;
+  border-radius: 10px !important;
+}
+
+.forget_modal{
+  background-color: rgb(9, 24, 134);
+  position: absolute;
+margin-top: -10px;
+  z-index: 999;
+  width: 400px;
+  margin-left: 500px;
+  margin-top: 20px;
+  border-radius: 40px;
+
+  height: 400px;
+}
+.forget_modal h1 {
+  font-size: 30px;
+
+  color: white;
+}
+.forget_modal .content{
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  gap: 50px;
+  margin-top: 50px;
+}
+.forget_modal .content input
+{
+       width: 250px;
+       height: 40px;
+       border: none;
+       outline: none;
+       border-radius: 10px;
+       padding-left: 10px;
+
+}
+.forget_modal .fa-x{
+  float: right;
+  margin-top: 20px;
+margin-right: 50px;
+font-size: 20px;
+font-weight: bold;
+color: white;
+}
+.forget_modal button{
+    padding: 10px;
+  border: none;
+  outline: none;
+  width: 300px;
+  margin-top: 30px ;
+  margin-left: 30px;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: aqua;
+}
+/*  */
+/* Custom styling for Admin component */
+.d-flex-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.user-data {
+  margin-top: 20px;
+}
+
+.user-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
