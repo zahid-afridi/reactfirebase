@@ -27,7 +27,7 @@ export default function Register() {
     const response = await axios.post(
       API_URL +"register",
       value
-    );
+    );  
 
     const responseData = response.data;
 

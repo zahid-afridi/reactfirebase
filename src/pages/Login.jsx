@@ -14,14 +14,16 @@ export default function Login() {
     password: "",
   });
 
+
   const navigate = useNavigate();
   const [modal, setModal] = useState(false);
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     if (storedUser) {
-  
+    
       navigate("/");
+      
     }
   }, [navigate]);
 
@@ -62,7 +64,30 @@ export default function Login() {
       // Save the user data to local storage
       localStorage.setItem("user", JSON.stringify(data.user));
 
-      // Show a styled success toast notification
+  
+          
+      
+        const userEmail=data.user.email
+      const userName=data.user.displayName
+        
+              try {
+    const response = await axios.post(
+      API_URL +"addUser",
+          {
+              
+            name: userName,
+            email: userEmail,
+              password: 1234567,
+              c_password: 1234567,
+            }
+    );  
+
+    const responseData = response.data;
+
+    if (responseData.success) {
+         const userId2 = responseData.data.user.id;
+         localStorage.setItem("userId", userId2);
+             // Show a styled success toast notification
       toast.success("Login Successful", {
         position: "top-right",
         autoClose: 2000,
@@ -72,9 +97,25 @@ export default function Login() {
         draggable: true,
         progress: undefined,
       });
+        navigate("/");
+         
+     console.log(responseData)
+    } else {
+      console.error("Registration Error:", responseData.message);
+
+     
+    
+    }
+  } catch (error) {
+    console.error("API Request Error:", error);
+
+  }
+        
+       
 
       // Delay the navigation for a short period (e.g., 2000 milliseconds)
-      navigate("/");
+ 
+    
     } catch (error) {
       console.error("Error getting user token:", error.message);
     }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { ToastContainer,toast } from 'react-toastify';
 import API_URL from '../../Axios/Axios';
 
 export default function SendNotification() {
@@ -62,7 +63,8 @@ export default function SendNotification() {
 
       if (response.data.success) {
         // Handle success, show a success message or update the UI
-        alert(response.data.message)
+        // alert(response.data.message)
+          toast.success(response.data.message,)
       } else {
         // Handle failure, show an error message or update the UI
         console.error('Failed to send notification:', response.data.message);
@@ -74,6 +76,14 @@ export default function SendNotification() {
   };
 
   return (
+    <> 
+      <ToastContainer
+        position="top-right"
+        autoClose="2000"
+        hideProgressBar={false}
+        pauseOnHover={true}
+        draggable={true}
+      ></ToastContainer>
     <div className="container mt-4">
       <h2 className="mb-4">Send Notification</h2>
       <div>
@@ -105,15 +115,16 @@ export default function SendNotification() {
           <label htmlFor="">Write Your Message</label>
           <input
         style={{height:'50px',border:'2px solid blue',outline:"none",padding:'10px'}}
-            type="text"
-            value={selectedData.message}
-            onChange={(e) => setSelectedData({ ...selectedData, message: e.target.value })}
-          />
+        type="text"
+        value={selectedData.message}
+        onChange={(e) => setSelectedData({ ...selectedData, message: e.target.value })}
+        />
 
           <button type="submit" className='btn btn-primary'>Send Notification</button>
         </form>
       </div>
       {/* Rest of your component */}
     </div>
+        </>
   );
 }

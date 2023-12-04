@@ -14,15 +14,17 @@ export default function Home() {
     // Check if the user is logged in or not
     const userString = localStorage.getItem("user");
     const loginUser = JSON.parse(userString);
-
+         
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (!user && !loginUser) {
+
+        
         navigate("/login");
       } else {
         try {
           const token = await user.getIdToken();
-          console.log("User Token:", token);
-
+          // console.log("User Token:", token);
+                    console.log(user)
           // Add the access token to the user object
           user.accessToken = token;
         } catch (error) {
