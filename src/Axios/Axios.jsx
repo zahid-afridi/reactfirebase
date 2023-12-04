@@ -1,4 +1,4 @@
-// const API_URL='http://rest-app.us-east-1.elasticbeanstalk.com/api/'
+// const API_URL='https://2434-103-244-178-0.ngrok-free.app/api/'
 
 const API_URL='https://api.weareoktopus.com/api/public/api/'
 
