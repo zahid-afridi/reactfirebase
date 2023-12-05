@@ -147,16 +147,10 @@ export default function SendNotification() {
               ))}
             </select>
           <h3 className='mt-5'>All Users:</h3>
-          <label >
-            <input
-              type="checkbox"
-              onChange={handleSelectAllUsers}
-              checked={selectedData.selectedUsers.length === users.length}
-            />
-            Select All Users
-          </label>
+       
           <ul className="list-group">
             {users.map((user) => (
+              
               <li key={user.id} className="list-group-item">
                 <label>
                   <input

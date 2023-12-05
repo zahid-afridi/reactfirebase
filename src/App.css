@@ -1,11 +1,18 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap');
+
+
+
 * {
   margin: 0;
   padding: 0;
+
 }
 
 body {
 
-  font-family: Arial, Helvetica, sans-serif;
+font-family: 'Roboto', sans-serif !important;
 }
 .login_btn {
   padding: 10px;
@@ -147,3 +154,47 @@ color: white;
   padding: 10px;
   margin-bottom: 10px;
 }
+.login-form{
+  margin-top: 80px;
+}
+.login-form input{
+   width: 410px;
+   border: 0.5px solid black;
+   height: 50px;
+   border-radius: 5px;
+   padding-left: 20px;
+}
+.login-form input:hover,.login-form input:active{
+  border: 2px solid black;
+}
+.login-form .forgot{
+  color: #006BB6;
+  font-weight: bold;
+
+}
+.login-form .loginwithBtn{
+
+  border: 1px solid black;
+  width: 320px;
+  height: 45px !important;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 50px;
+}
+.login-form .loginwithBtn:hover{
+  border: 2px solid black;
+  cursor: pointer;
+}
+.login-form .loginwithBtn img {
+  width: 25px;
+}
+.login-form .loginwithBtn span{
+  font-weight: bold;
+}
+
+/* login form css start  */
+
+/* login form css end */
