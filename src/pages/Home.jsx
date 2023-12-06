@@ -82,7 +82,7 @@ export default function Home() {
         pauseOnHover={true}
         draggable={true}
       ></ToastContainer>
-      <div className="container mt-5">
+      <div className="container " style={{marginTop:'100px',marginLeft:'250px'}}>
         {user && (
           <div className="container">
             <h2>Welcome, {user.displayName || user.email}!</h2>
@@ -91,7 +91,7 @@ export default function Home() {
             {user.providerData && user.providerData.length > 0 && (
               <p>Provider: {user.providerData[0].providerId}</p>
             )}
-            <button className="btn btn-primary" onClick={logout}>
+            <button className="btn btn-primary w-25" onClick={logout}>
               Logout
             </button>
           </div>
